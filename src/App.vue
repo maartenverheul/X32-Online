@@ -1,6 +1,6 @@
 <template>
   <!-- <div id="app" class="noselect" style="height: 100vh;"> -->
-  <div id="app" style="height: 100vh;">
+  <div id="app" class="noselect" style="height: 100vh;">
     <TopBar id="topbar"/>
     <router-view id="content"/>
   </div>

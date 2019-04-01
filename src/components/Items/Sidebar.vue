@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'expanded': expanded}">
+  <div :class="{'sidebar': true, 'expanded': expanded}">
     <div class="mutes component" style="margin-top: 10px;" v-on:click="open">
       <span class="h1">MUTE</span>
       <div class="btn-group">
@@ -27,61 +27,72 @@
 
 <script>
 export default {
-  name: 'SideBar',
-  data () {
+  name: "SideBar",
+  data() {
     return {
       expanded: false
-    }
+    };
   },
   methods: {
-    open () {
-      this.expanded = true
+    open() {
+      this.expanded = true;
     },
-    close () {
-      this.expanded = false
+    close() {
+      this.expanded = false;
     }
   }
-}
+};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .sidebar {
   padding: 0;
   background-color: #111;
-  width: 173px;
+  width: 210px;
   height: 100%;
   transition: width 0.1s ease-out;
-}
-.sidebar.expanded {
-  width: 800px;
-}
-.sidebar .component{
-  text-align: center;
-  cursor: pointer;
-}
-.sidebar .component .h1{
-  color: white;
-  font-size: 1.3rem;
-}
-.sidebar .component .btn-group {
-  margin: 10px 1px;
-}
-.sidebar .component .btn {
-  margin: 2px;
-  width: 25%;
-  height: 20px;
-  display: inline-block;
-}
-.sidebar .component .btn {
-  background-color: #333333;
-  border: 2px solid #424242;
-}
-.sidebar .mutes .btn.active {
-  background-color: #e05555;
-  border: 2px solid #7b0e0e;
-}
-.sidebar .assigns .btn.active {
-  background-color: #e09c55;
-  border: 2px solid #755100;
+
+  &.expanded {
+    width: 800px;
+  }
+  .component {
+    text-align: center;
+    cursor: pointer;
+  }
+  .component {
+    .h1 {
+      color: white;
+      font-size: 1.3rem;
+    }
+    .btn-group {
+      margin: 10px 1px;
+    }
+    .btn {
+      margin: 2px;
+      width: 25%;
+      height: 20px;
+      display: inline-block;
+      background-color: #333333;
+      border: 2px outset #424242;
+      border-radius: 3px;
+    }
+
+    &.mutes {
+      .btn {
+        &.active {
+          background-color: #e05555;
+          border-color: #ff4444;
+        }
+      }
+    }
+    &.assigns {
+      .btn {
+        &.active {
+          background-color: #e09c55;
+          border-color: #d69708;
+        }
+      }
+    }
+  }
 }
 </style>

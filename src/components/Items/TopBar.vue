@@ -23,6 +23,9 @@ export default {
 .topbar {
   margin: 0;
   border-bottom: 1px solid #999;
+  /* box-shadow: inset 0 0 100px black; */
+  box-shadow: 0px 0px 20px -1px rgba(0,0,0,1.0);
+  z-index: 1;
 }
 .topbar .btn-group {
   display: inline-block;
