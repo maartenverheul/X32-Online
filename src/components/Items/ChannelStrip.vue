@@ -1,5 +1,5 @@
 <template>
-  <div class="channelstrip" style="color: white;">
+  <div class="channelstrip" style="color: white; width: 1px">
     <Channel :key="ch.id" v-for="ch in channels" :props="ch"/>
   </div>
 </template>

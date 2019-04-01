@@ -48,12 +48,12 @@ export default {
 .sidebar {
   padding: 0;
   background-color: #111;
-  width: 210px;
+  width: 112px;
   height: 100%;
   transition: width 0.1s ease-out;
 
   &.expanded {
-    width: 800px;
+    width: 300px;
   }
   .component {
     text-align: center;
