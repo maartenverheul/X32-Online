@@ -1,28 +1,47 @@
 <template>
-  <div class="bankpage" style="height: calc(100% - 47px)">
-    <SideBar id="sidebar"/>
-  </div>
+    <div id="bankpage">
+      <ChannelStrip v-on:click.native="closeSidebar"/>
+      <SideBar class="sidebar" ref="sidebar"/>
+    </div>
 </template>
 
 <script>
 import SideBar from '@/components/items/SideBar'
+import ChannelStrip from '@/components/items/ChannelStrip'
 export default {
   name: 'BankPage',
   components: {
-    SideBar
+    SideBar,
+    ChannelStrip
   },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      sidebar: {}
+    }
+  },
+  methods: {
+    closeSidebar () {
+      this.$refs.sidebar.close();
     }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-#sidebar{
-  position: fixed;
-  right: 0;
+<style scoped lang="less">
+#content {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: stretch;
 }
+.channelstrip {
+  flex-grow: 1
+}
+// .sidebar{
+
+// }
 </style>

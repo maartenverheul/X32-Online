@@ -1,6 +1,6 @@
 <template>
-  <div class="sidebar">
-    <div class="mutes component" style="margin-top: 10px;">
+  <div :class="{'expanded': expanded}">
+    <div class="mutes component" style="margin-top: 10px;" v-on:click="open">
       <span class="h1">MUTE</span>
       <div class="btn-group">
         <div class="btn"></div>
@@ -30,7 +30,15 @@ export default {
   name: 'SideBar',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      expanded: false
+    }
+  },
+  methods: {
+    open () {
+      this.expanded = true
+    },
+    close () {
+      this.expanded = false
     }
   }
 }
@@ -40,8 +48,12 @@ export default {
 .sidebar {
   padding: 0;
   background-color: #111;
-  width: 100px;
+  width: 173px;
   height: 100%;
+  transition: width 0.1s ease-out;
+}
+.sidebar.expanded {
+  width: 800px;
 }
 .sidebar .component{
   text-align: center;

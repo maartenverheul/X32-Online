@@ -1,7 +1,8 @@
 <template>
-  <div id="app" class="noselect" style="height: 100vh;">
-    <TopBar />
-    <router-view/>
+  <!-- <div id="app" class="noselect" style="height: 100vh;"> -->
+  <div id="app" style="height: 100vh;">
+    <TopBar id="topbar"/>
+    <router-view id="content"/>
   </div>
 </template>
 
@@ -20,6 +21,20 @@ html, body{
   padding:0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+#app {
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+#content {
+  flex-grow: 1;
+  align-self: stretch;
 }
 button{
   cursor: pointer;
