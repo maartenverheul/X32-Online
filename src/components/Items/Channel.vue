@@ -1,7 +1,7 @@
 <template>
   <div class="channel">
     <div class="gain"></div>
-    <div class="scribble" :class="[props.scribble.color, props.scribble.inverted?'inverted':'']" v-on:click="scribble_click" v-on:contextmenu.prevent="scribble_context">{{props.scribble.text}}</div>
+    <div class="scribble" ref="scribble" :class="[props.scribble.color, props.scribble.inverted?'inverted':'']" v-on:click="scribble_click" v-on:contextmenu.prevent="scribble_context">{{props.scribble.text}}</div>
     <div class="mute" :class="[props.mute.self?'active-self':'', props.mute.group?'active-group':'']" v-on:click="mute_click">Mute</div>
     <div class="fader" style="flex-grow: 1">Item 3</div>
     <div class="chid">Ch {{props.id}}</div>
@@ -22,17 +22,36 @@ export default {
   created() {
     if(this.channelnr.length == 1) this.channelnr = '0' + this.channelnr;
   },
+  mounted(){
+    
+  },
   methods: {
     scribble_click(e){
-      alert("Scribble!");
+      console.log("SCRIBBLE CLICK");
+      this.change_color("red");
     },
     scribble_context(e){
-      alert("Scribble context!"); 
+      console.log("SCRIBBLE CONTEXT");
+      this.change_color("green", true);
     },
     mute_click(e){
       console.log("MUTE");
       if(e.target.classList.contains("active-self")) e.target.classList.remove("active-self");
       else e.target.classList.add("active-self");
+    },
+    change_color(color, inverted){
+      this.$refs.scribble.classList.remove("black");
+      this.$refs.scribble.classList.remove("red");
+      this.$refs.scribble.classList.remove("green");
+      this.$refs.scribble.classList.remove("yellow");
+      this.$refs.scribble.classList.remove("blue");
+      this.$refs.scribble.classList.remove("magenta");
+      this.$refs.scribble.classList.remove("cyan");
+      this.$refs.scribble.classList.remove("white");
+      this.$refs.scribble.classList.remove("inverted");
+      this.$refs.scribble.classList.add(color);
+      if(inverted) this.$refs.scribble.classList.add("inverted");
+      return true;
     }
   }
 }
