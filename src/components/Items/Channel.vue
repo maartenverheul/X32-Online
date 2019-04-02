@@ -1,5 +1,5 @@
 <template>
-  <div :class="['channel', props.color, props.border?'border':'']">
+  <div :class="['channel', props.color, props.inverted?'inverted':'']">
     <div class="gain rounded"></div>
     <div class="scribble rounded">{{props.text}}</div>
     <div style="flex-grow: 1">Item 3</div>
@@ -64,22 +64,22 @@ $spacing: 10px;
     border-radius: 7px;
   }
 
-  &.black:not(.border) .scribble {    background-color: #333; }
-  &.red:not(.border) .scribble {      background-color: #e72d2e; }
-  &.green:not(.border) .scribble {    background-color: #35e72d; }
-  &.yellow:not(.border) .scribble {   background-color: #fcf300; }
-  &.blue:not(.border) .scribble {     background-color: #0060ff; }
-  &.magenta:not(.border) .scribble {  background-color: #ed27ac; }
-  &.cyan:not(.border) .scribble {     background-color: #2de0e7; }
-  &.white:not(.border) .scribble {    background-color: #fff; }
-  &.black.border .scribble { border-color: #333; background-color: #333 }
-  &.red.border .scribble {    border-color: #e72d2e; color: #e72d2e; }
-  &.green.border .scribble {  border-color: #35e72d; color: #35e72d; }
-  &.yellow.border .scribble { border-color: #fcf300; color: #fcf300; }
-  &.blue.border .scribble {   border-color: #0060ff; color: #0060ff; }
-  &.magenta.border .scribble {border-color: #ed27ac; color: #ed27ac; }
-  &.cyan.border .scribble {   border-color: #2de0e7; color: #2de0e7; }
-  &.white.border .scribble {  border-color: #ffffff; color: #ffffff; }
+  &.black:not(.inverted) .scribble {  border-color: #333333; background-color: #0c0c0c; color: transparent; }
+  &.red:not(.inverted) .scribble {    background-color: #1d0505; border-color: #e72d2e; color: #e72d2e; }
+  &.green:not(.inverted) .scribble {  background-color: #051704; border-color: #35e72d; color: #35e72d; }
+  &.yellow:not(.inverted) .scribble { background-color: #171600; border-color: #fcf300; color: #fcf300; }
+  &.blue:not(.inverted) .scribble {   background-color: #000c1f; border-color: #0060ff; color: #0060ff; }
+  &.magenta:not(.inverted) .scribble {background-color: #1b0413; border-color: #ed27ac; color: #ed27ac; }
+  &.cyan:not(.inverted) .scribble {   background-color: #041617; border-color: #2de0e7; color: #2de0e7; }
+  &.white:not(.inverted) .scribble {  background-color: #131313; border-color: #ffffff; color: #ffffff; }
+  &.black.inverted .scribble {    background-color: #333333; }
+  &.red.inverted .scribble {      background-color: #e72d2e; }
+  &.green.inverted .scribble {    background-color: #35e72d; }
+  &.yellow.inverted .scribble {   background-color: #fcf300; }
+  &.blue.inverted .scribble {     background-color: #0060ff; }
+  &.magenta.inverted .scribble {  background-color: #ed27ac; }
+  &.cyan.inverted .scribble {     background-color: #2de0e7; }
+  &.white.inverted .scribble {    background-color: #ffffff; }
 }
 
 </style>
