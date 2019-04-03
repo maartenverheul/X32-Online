@@ -1,8 +1,8 @@
 <template>
   <!-- <div id="app" class="noselect" style="height: 100vh;"> -->
   <div id="app" class="noselect" style="height: 100vh;">
-    <TopBar id="topbar"/>
-    <router-view id="content"/>
+    <TopBar />
+    <router-view />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html, body{
   padding:0;
   margin: 0;
@@ -32,7 +32,7 @@ html, body{
   justify-content: flex-start;
   align-items: stretch;
 }
-#content {
+.content {
   flex-grow: 1;
   align-self: stretch;
 }

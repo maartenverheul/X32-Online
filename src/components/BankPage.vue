@@ -1,5 +1,5 @@
 <template>
-    <div id="bankpage">
+    <div id="bankpage" class="content">
       <ChannelStrip v-on:click.native="closeSidebar"/>
       <SideBar ref="sidebar"/>
     </div>
@@ -29,7 +29,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#content {
+.content {
   height: 100%;
   display: flex;
   flex-direction: row;
