@@ -1,9 +1,9 @@
 <template>
   <div class="topbar">
     <div class="btn-group right">
-      <router-link tag="button" :to="{name: 'faderoverviewpage'}" class="btn"><i class="material-icons">apps</i></router-link>
-      <router-link tag="button" :to="{name: 'bankpage'}" class="btn"><i class="material-icons">view_week</i></router-link>
-      <router-link tag="button" :to="{name: 'channelpage', params: { channel: '01' }}" class="btn"><i class="material-icons">remove_red_eye</i></router-link>
+      <router-link tag="button" :to="{name: 'overview'}" class="btn"><i class="material-icons">apps</i></router-link>
+      <router-link tag="button" :to="{name: 'mixerview'}" class="btn"><i class="material-icons">view_week</i></router-link>
+      <router-link tag="button" :to="{name: 'channelview', params: { channel: '01' }}" class="btn"><i class="material-icons">remove_red_eye</i></router-link>
     </div>
     <div class="props">
       <div class="name">Ch 01</div>
@@ -11,9 +11,9 @@
       <div class="type">Fader</div>
     </div>
     <div class="btn-group right left">
-      <router-link tag="button" :to="{name: 'faderoverviewpage'}" class="btn"><i class="material-icons">settings</i></router-link>
-      <router-link tag="button" :to="{name: 'bankpage'}" class="btn"><i class="material-icons">linear_scale</i></router-link>
-      <router-link tag="button" :to="{name: 'channelpage', params: { channel: '01' }}" class="btn"><i class="material-icons">album</i></router-link>
+      <router-link tag="button" :to="{name: 'settingsview'}" class="btn"><i class="material-icons">settings</i></router-link>
+      <router-link tag="button" :to="{name: 'mixerview'}" class="btn"><i class="material-icons">linear_scale</i></router-link>
+      <router-link tag="button" :to="{name: 'channelview', params: { channel: '01' }}" class="btn"><i class="material-icons">album</i></router-link>
     </div>
     <div class="presets">Presets</div>
   </div>

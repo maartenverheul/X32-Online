@@ -49,8 +49,11 @@ export default {
   padding: 0;
   background-color: #111;
   width: 112px;
-  height: 100%;
   transition: width 0.1s ease-out;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 
   &.expanded {
     width: 300px;
