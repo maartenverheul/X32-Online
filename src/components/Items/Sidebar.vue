@@ -1,6 +1,6 @@
 <template>
-  <div :class="{'sidebar': true, 'expanded': expanded}">
-    <div class="mutes component" style="margin-top: 10px;" v-on:click="open">
+  <div :class="{'sidebar': true, 'expanded': expanded}" v-on:click="open">
+    <div class="mutes component" style="margin-top: 10px;">
       <span class="h1">MUTE</span>
       <div class="btn-group">
         <div class="btn"></div>
@@ -50,17 +50,13 @@ export default {
   background-color: #111;
   width: 112px;
   transition: width 0.1s ease-out;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  cursor: pointer;
 
   &.expanded {
     width: 300px;
   }
   .component {
     text-align: center;
-    cursor: pointer;
   }
   .component {
     .h1 {

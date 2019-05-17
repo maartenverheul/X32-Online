@@ -32,7 +32,7 @@ export default {
     },
     scribble_context(e){
       console.log("SCRIBBLE CONTEXT");
-      this.change_color("green", true);
+      this.change_color("black");
     },
     mute_click(e){
       console.log("MUTE");

@@ -25,16 +25,14 @@ html, body{
 #app {
   width: 100vw;
   height: 100vh;
+  background-color: #222;
   /* overflow: hidden; */
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 20fr;
 }
 .content {
-  flex-grow: 1;
-  align-self: stretch;
+  
 }
 button{
   cursor: pointer;

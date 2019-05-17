@@ -58,7 +58,6 @@ export default {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	background-color: #333;
   overflow-x: scroll;
   flex-grow: 1;
 
