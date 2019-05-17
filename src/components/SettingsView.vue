@@ -3,7 +3,7 @@
       <div class="nav">
         <div class="button-group fill">
           <div class="btn">Device</div>
-          <div class="btn">About</div>
+          <div class="btn active">About</div>
           <div class="btn">Version</div>
         </div>
       </div>
@@ -52,11 +52,13 @@ export default {
       &:first-child{ 
         border-top-left-radius: $radius;
         border-bottom-left-radius: $radius;
-        border-style: inset;
       }
       &:last-child{ 
         border-top-right-radius: $radius;
         border-bottom-right-radius: $radius;
+      }
+      &.active {
+        border-style: inset;
       }
     }
     &.fill .btn{
